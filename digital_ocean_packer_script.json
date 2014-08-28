@@ -1,0 +1,16 @@
+{
+    "builders": [{
+        "type": "digitalocean",
+        "api_key": "{{env `DIGITALOCEAN_API_KEY`}}",
+        "client_id": "{{env `DIGITALOCEAN_CLIENT_ID`}}",
+        "region": "lon1",
+        "image": "ubuntu-14-04-x64",
+        "snapshot_name": "disk-image-demo-{{env `GO_PIPELINE_COUNTER`}}.{{env `GO_REVISION`}}",
+        "state_timeout": "60m"
+    }],
+    "provisioners": [{
+        "type": "shell",
+        "inline": ["echo foo", "apt-get install sl"]
+    }]
+}
+
