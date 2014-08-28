@@ -1,13 +1,13 @@
 {
     "variables": {
-        "revision": "{{env `GO_REVISION`}}",
-        "pipeline_counter": "{{env `GO_PIPELINE_COUNTER`}}"
+        "commit": "{{env `SNAP_COMMIT`}}",
+        "pipeline_counter": "{{env `SNAP_PIPELINE_COUNTER`}}"
     },
     "builders": [{
         "type": "digitalocean",
         "region": "lon1",
         "image": "ubuntu-14-04-x64",
-        "snapshot_name": "disk-image-demo-{{user `pipeline_counter`}}.{{user `revision`}}",
+        "snapshot_name": "disk-image-demo-{{user `pipeline_counter`}}.{{user `commit`}}",
         "state_timeout": "60m"
     }],
     "provisioners": [{
