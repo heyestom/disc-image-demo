@@ -2,10 +2,10 @@ require_relative 'digital_ocean_utils'
 
 digital_ocean_utils = DigitalOceanUtils.new(ENV['DIGITALOCEAN_CLIENT_ID'], ENV['DIGITALOCEAN_API_KEY'])
 
-environment = ARGV[0].upcase
 application_name = ENV['APPLICATION_NAME']
-build_number = ARGV[2]
-commit_sha = ARGV[3]
+build_number = ENV['SNAP_PIPELINE_COUNTER']
+commit_sha = ENV['SNAP_COMMIT_SHORT']
+environment = ARGV[0].upcase
 
 DROPLET_NAME = "#{environment}-#{application_name}"
 image_name_for_this_build = "#{application_name}-#{build_number}.#{commit_sha}"

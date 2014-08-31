@@ -1,6 +1,6 @@
 {
     "variables": {
-        "commit": "{{env `SNAP_COMMIT`}}",
+        "commit": "{{env `SNAP_COMMIT_SHORT`}}",
         "pipeline_counter": "{{env `SNAP_PIPELINE_COUNTER`}}",
         "image_name_prefix": "{{env `APPLICATION_NAME`}}"
     },
