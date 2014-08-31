@@ -19,8 +19,9 @@
             "go version"
         ]
     },{
-        "type": "shell",
-        "script": "application/webservice.go"
+        "type": "file",
+        "source": "application/webservice.go",
+        "destination": "tmp/webservice.go"
     },{
         "type": "shell",
         "inline": [
