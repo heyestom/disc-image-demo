@@ -20,7 +20,7 @@
         ]
     },{
         "type": "shell",
-        "script": ["application/webservice.go"]
+        "script": "application/webservice.go"
     },{
         "type": "shell",
         "inline": [
