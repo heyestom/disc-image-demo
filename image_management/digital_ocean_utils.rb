@@ -10,7 +10,7 @@ class DigitalOceanUtils
   end
 
   def create_or_rebuild_droplet(droplet_name, image_name)
-
+    puts "Image Name is: #{image_name}"
     image_id = image_id_for image_name
 
     if droplet_exists? droplet_name
