@@ -17,4 +17,4 @@ if [ -z "$SNAP_COMMIT" ]; then
 fi
 
 bundle install
-bundle exec ruby deploy_image_to.rb $ENVIRONMENT $SNAP_COMMIT $SNAP_PIPELINE_COUNTER
+bundle exec ruby image_management/deploy_image_to.rb $ENVIRONMENT $SNAP_COMMIT $SNAP_PIPELINE_COUNTER
