@@ -10,7 +10,7 @@ class DigitalOceanUtils
                                                   :debug => false
   end
 
-  def create_or_rebuild_droplet(droplet_name, image_name)
+  def create_or_rebuild_droplet(droplet_name, image_name, ssh_keys=[])  #ssh_keys only works with new droplets :( limitation of the DO API...
     puts "Image Name is: #{image_name}"
     image_id = image_id_for image_name
 
@@ -23,8 +23,8 @@ class DigitalOceanUtils
       puts 'Droplet shut down successfully'
 
     else
-      puts "Rebuilding from image #{image_name}"
-      create_new_droplet droplet_name, image_id
+      puts "Building new box from image #{image_name}"
+      create_new_droplet droplet_name, image_id, ssh_keys
       puts 'Waiting for new droplet...'
     end
 

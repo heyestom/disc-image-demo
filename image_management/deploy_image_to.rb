@@ -5,20 +5,21 @@ digital_ocean_utils = DigitalOceanUtils.new(ENV['DIGITALOCEAN_CLIENT_ID'], ENV['
 application_name = ENV['APPLICATION_NAME']
 build_number = ENV['SNAP_PIPELINE_COUNTER']
 commit_sha = ENV['SNAP_COMMIT_SHORT']
+ssh_keys = ENV['AUTHORIZED_USERS'].split(',')
 environment = ARGV[0].upcase
 
 DROPLET_NAME = "#{environment}-#{application_name}"
 image_name_for_this_build = "#{application_name}-#{build_number}.#{commit_sha}"
 
 
-ip_address = digital_ocean_utils.create_or_rebuild_droplet DROPLET_NAME, image_name_for_this_build
+ip_address = digital_ocean_utils.create_or_rebuild_droplet DROPLET_NAME, image_name_for_this_build, ssh_keys
 
 
 puts "Waiting for app to be running on: #{ip_address}"
 # digital_ocean_utils.wait_until_app_is_running ip_address
 # puts 'Application ready'
-
-
+#
+#
 #
 # def wait_until_app_is_running(ip_address)
 #   wait_until_status_200(ip_address)
@@ -49,7 +50,7 @@ puts "Waiting for app to be running on: #{ip_address}"
 #     500
 #   end
 # end
-
+#
 # def ssh_is_available_on(ip_address)
 #   `ssh -q root@#{ip_address} exit; echo $?`.to_i == 0
 # end
