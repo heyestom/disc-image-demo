@@ -1,7 +1,31 @@
 GEM
+  remote: https://rubygems.org/
   specs:
+    coderay (1.1.0)
+    digital_ocean (1.3.0)
+      faraday (~> 0.8.7)
+      faraday_middleware (~> 0.9.0)
+      json
+      rash
+    faraday (0.8.8)
+      multipart-post (~> 1.2.0)
+    faraday_middleware (0.9.0)
+      faraday (>= 0.7.4, < 0.9)
+    hashie (2.0.5)
+    json (1.8.1)
+    method_source (0.8.2)
+    multipart-post (1.2.0)
+    pry (0.10.0)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    rash (0.4.0)
+      hashie (~> 2.0.0)
+    slop (3.5.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  digital_ocean
+  pry

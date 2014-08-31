@@ -1,6 +1,7 @@
 require 'digital_ocean'
 require 'net/http'
 require 'uri'
+require 'pry'
 
 class DigitalOceanUtils
   def initialize(client_id, api_key)
@@ -32,10 +33,10 @@ class DigitalOceanUtils
   end
 
   def create_new_droplet(name, image_id, ssh_keys=[])
-    new_york_2 = 4
+    london = 7
     smallest_box_512 = 66
 
-    response = @digital_ocean_client.droplets.create({name: name, size_id: smallest_box_512, image_id: image_id, region_id: new_york_2, ssh_key_ids: ssh_keys})
+    response = @digital_ocean_client.droplets.create({name: name, size_id: smallest_box_512, image_id: image_id, region_id: london, ssh_key_ids: ssh_keys})
     response.droplet.id
   end
 
