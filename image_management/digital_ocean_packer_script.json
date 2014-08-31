@@ -18,6 +18,15 @@
             "sudo apt-get -y install golang",
             "go version"
         ]
+    },{
+        "type": "shell",
+        "script": ["application/webservice.go"]
+    },{
+        "type": "shell",
+        "inline": [
+            "go build /tmp/webservice.go",
+            "./tmp/webservice &"
+        ]
     }]
 }
 
