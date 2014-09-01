@@ -26,7 +26,7 @@
         "type": "shell",
         "inline": [
             "go build /tmp/webservice.go",
-            "/tmp/webservice &"
+            "echo '@reboot /root/webservice &'| crontab -"
         ]
     }]
 }
