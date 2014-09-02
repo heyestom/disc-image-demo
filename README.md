@@ -5,9 +5,18 @@ https://github.com/cgakok/disc-image-demo
 
 ![Alt text](/setupImages/1 - Fork Demo.png?raw=true "1 - Fork Demo code")
 
+Next, navigate to snap-ci.com
+Sign-in with your GitHub credentials.
+When prompted, Authorize Snap, setup first build, and add the demo project to snap
+
 ![Alt text](/setupImages/2 - Authorize Snap.png?raw=true "1 - Authorize Snap")
 ![Alt text](/setupImages/3 - Setup Build.png?raw=true "3 - Setup Build")
 ![Alt text](/setupImages/4 - Add disk-image-demo.png?raw=true "4 - Add disk-image-demo project to snap-ci")
+
+At this point, snap will have checked-out your code and setup a dummy-stage.
+
+Customize the build stages.
+
 ![Alt text](/setupImages/5 - Customize build stages.png?raw=true "5 - Customize build stages")
 ![Alt text](/setupImages/6 - Setup Packer Install Stage.png?raw=true "6 - Setup Packer Install Stage")
 ![Alt text](/setupImages/7 - Setup Image Assembly.png?raw=true "7 - Setup Image Assembly")
