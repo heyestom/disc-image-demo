@@ -5,8 +5,10 @@ https://github.com/cgakok/disc-image-demo
 
 ![Alt text](/setupImages/1 - Fork Demo.png?raw=true "1 - Fork Demo code")
 
-Next, navigate to snap-ci.com
+Next, navigate to snap-ci.com.
+
 Sign-in with your GitHub credentials.
+
 When prompted, Authorize Snap, setup first build, and add the demo project to snap
 
 ![Alt text](/setupImages/2 - Authorize Snap.png?raw=true "1 - Authorize Snap")
