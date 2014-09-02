@@ -1,4 +1,14 @@
-To Get Started:
+You will need a DigitalOcean account for this demo.  
+
+(DO is pretty cheap at 0.7¢/hour for the low-end box.  https://www.digitalocean.com/pricing/)
+
+You will need your API Client ID and API Key, found here: 
+
+https://cloud.digitalocean.com/api_access
+
+
+Setup your build pipeline:
+
 First, you'll want to fork the demo code which you can find at:
 
 https://github.com/cgakok/disc-image-demo
@@ -17,10 +27,14 @@ When prompted, Authorize Snap, setup first build, and add the demo project to sn
 
 At this point, snap will have checked-out your code and setup a dummy-stage.
 
-Customize the build stages.
+Customize the build stages as shown in the following images.
 
 ![Alt text](/setupImages/5 - Customize build stages.png?raw=true "5 - Customize build stages")
 ![Alt text](/setupImages/6 - Setup Packer Install Stage.png?raw=true "6 - Setup Packer Install Stage")
 ![Alt text](/setupImages/7 - Setup Image Assembly.png?raw=true "7 - Setup Image Assembly")
 ![Alt text](/setupImages/8 - Setup Staging Deploy.png?raw=true "8 - Setup Staging Deploy")
 ![Alt text](/setupImages/9 - Setup Prod Deploy.png?raw=true "9 - Setup Prod Deploy")
+
+
+Let me know if you have any issues with the setup:
+Chris - ckozak@gmail.com
