@@ -6,6 +6,11 @@ You will need your API Client ID and API Key, found here:
 
 https://cloud.digitalocean.com/api_access
 
+You will also want to add your public ssh key so that you can access your deployed environments:
+
+https://cloud.digitalocean.com/ssh_keys
+
+
 
 Setup your build pipeline:
 
