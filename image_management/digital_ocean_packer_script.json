@@ -14,9 +14,7 @@
     "provisioners": [{
         "type": "shell",
         "inline": [
-            "sudo apt-get -y update",
-            "sudo apt-get -y install sl",
-            "sudo apt-get -y install cowsay"
+            "sudo apt-get -y update"
         ]
     }]
 }
