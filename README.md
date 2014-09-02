@@ -37,4 +37,5 @@ Customize the build stages as shown in the following images.
 
 
 Let me know if you have any issues with the setup:
-Chris - ckozak@gmail.com
+
+Chris : ckozak@gmail.com
