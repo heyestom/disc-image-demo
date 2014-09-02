@@ -42,7 +42,7 @@ class DigitalOceanUtils
   end
 
   def rebuild_droplet_from(droplet_name, image_id)
-    droplet_id = @digital_ocean_client.droplets.list.droplets.first { |droplet| droplet.name == droplet_name }.id
+    droplet_id = @digital_ocean_client.droplets.list.droplets.select { |droplet| droplet.name == droplet_name }.first.id
     @digital_ocean_client.droplets.rebuild(droplet_id, :image_id => image_id)
     droplet_id
   end
@@ -57,11 +57,11 @@ class DigitalOceanUtils
 
 
   def droplet_ip_address(droplet_name)
-    @digital_ocean_client.droplets.list.droplets.first { |droplet| droplet.name == droplet_name }.ip_address
+    @digital_ocean_client.droplets.list.droplets.select { |droplet| droplet.name == droplet_name }.first.ip_address
   end
 
   def image_id_for(image_name)
-    @digital_ocean_client.images.list.images.first { |image| image.name == image_name }.id
+    @digital_ocean_client.images.list.images.select { |image| image.name == image_name }.first.id
   end
 
   def ssh_key_ids_from(ssh_key_names)
@@ -72,6 +72,6 @@ class DigitalOceanUtils
 
   def ssh_key_id_for(ssh_key_name)
     puts "ssh key name: #{ssh_key_name}"
-    @digital_ocean_client.ssh_keys.list.ssh_keys.first{|ssh_key| ssh_key.name == ssh_key_name}.id
+    @digital_ocean_client.ssh_keys.list.ssh_keys.select{|ssh_key| ssh_key.name == ssh_key_name}.first.id
   end
 end
