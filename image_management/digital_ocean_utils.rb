@@ -65,10 +65,13 @@ class DigitalOceanUtils
   end
 
   def ssh_key_ids_from(ssh_key_names)
-    ssh_key_names.map{|ssh_key_name| ssh_key_id_for(ssh_key_name)}
+    ssh_key_ids = ssh_key_names.map{|ssh_key_name| ssh_key_id_for(ssh_key_name)}
+    puts "ssh key ids: #{ssh_key_ids}"
+    ssh_key_ids
   end
 
   def ssh_key_id_for(ssh_key_name)
+    puts "ssh key name: #{ssh_key_name}"
     @digital_ocean_client.ssh_keys.list.ssh_keys.first{|ssh_key| ssh_key.name == ssh_key_name}.id
   end
 end

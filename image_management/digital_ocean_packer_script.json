@@ -15,21 +15,8 @@
         "type": "shell",
         "inline": [
             "sudo apt-get -y update",
-            "sudo apt-get -y install golang",
-            "go version"
-        ]
-    },{
-        "type": "file",
-        "source": "application/webservice.go",
-        "destination": "/tmp/webservice.go"
-    },{
-        "type": "file",
-        "source": "scripts/start_webservice.conf",
-        "destination": "/etc/init/start_webservice.conf"
-    },{
-        "type": "shell",
-        "inline": [
-            "go build /tmp/webservice.go"
+            "sudo apt-get -y install sl",
+            "sudo apt-get -y install cowsay"
         ]
     }]
 }
