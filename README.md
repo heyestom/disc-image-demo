@@ -1,6 +1,8 @@
 To Get Started:
-
+First, you'll want to fork the demo code which you can find at:
+https://github.com/cgakok/disc-image-demo
 ![Alt text](/setupImages/1 - Fork Demo.png?raw=true "1 - Fork Demo code")
+
 ![Alt text](/setupImages/2 - Authorize Snap.png?raw=true "1 - Authorize Snap")
 ![Alt text](/setupImages/3 - Setup Build.png?raw=true "3 - Setup Build")
 ![Alt text](/setupImages/4 - Add disk-image-demo.png?raw=true "4 - Add disk-image-demo project to snap-ci")
