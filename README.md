@@ -38,9 +38,9 @@ Customize the build stages as shown in the following images.
 
 (Ignore the Install Packer stage, it is no longer necessary)
 
-![Alt text](/setupImages/7 - Setup Image Assembly.png?raw=true "6 - Setup Image Assembly")
-![Alt text](/setupImages/8 - Setup Staging Deploy.png?raw=true "7 - Setup Staging Deploy")
-![Alt text](/setupImages/9 - Setup Prod Deploy.png?raw=true "8 - Setup Prod Deploy")
+![Alt text](/setupImages/6 - Setup Image Assembly.png?raw=true "6 - Setup Image Assembly")
+![Alt text](/setupImages/7 - Setup Staging Deploy.png?raw=true "7 - Setup Staging Deploy")
+![Alt text](/setupImages/8 - Setup Prod Deploy.png?raw=true "8 - Setup Prod Deploy")
 
 
 Let me know if you have any issues with the setup:
