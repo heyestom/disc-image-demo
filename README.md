@@ -35,10 +35,12 @@ At this point, snap will have checked-out your code and setup a dummy-stage.
 Customize the build stages as shown in the following images.
 
 ![Alt text](/setupImages/5 - Customize build stages.png?raw=true "5 - Customize build stages")
-![Alt text](/setupImages/6 - Setup Packer Install Stage.png?raw=true "6 - Setup Packer Install Stage")
-![Alt text](/setupImages/7 - Setup Image Assembly.png?raw=true "7 - Setup Image Assembly")
-![Alt text](/setupImages/8 - Setup Staging Deploy.png?raw=true "8 - Setup Staging Deploy")
-![Alt text](/setupImages/9 - Setup Prod Deploy.png?raw=true "9 - Setup Prod Deploy")
+
+(Ignore the Install Packer stage, it is no longer necessary)
+
+![Alt text](/setupImages/7 - Setup Image Assembly.png?raw=true "6 - Setup Image Assembly")
+![Alt text](/setupImages/8 - Setup Staging Deploy.png?raw=true "7 - Setup Staging Deploy")
+![Alt text](/setupImages/9 - Setup Prod Deploy.png?raw=true "8 - Setup Prod Deploy")
 
 
 Let me know if you have any issues with the setup:
