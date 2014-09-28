@@ -2,7 +2,9 @@
     "variables": {
         "commit": "{{env `SNAP_COMMIT_SHORT`}}",
         "pipeline_counter": "{{env `SNAP_PIPELINE_COUNTER`}}",
-        "image_name_prefix": "{{env `APPLICATION_NAME`}}"
+        "image_name_prefix": "{{env `APPLICATION_NAME`}}",
+	"client_id": "{{env `DIGITAL_OCEAN_CLIENT_ID`}}",
+	"api_key": "{{env `DIGITAL_OCEAN_API_KEY`}}"
     },
     "builders": [{
         "type": "digitalocean",
@@ -10,8 +12,8 @@
         "image": "ubuntu-14-04-x64",
         "snapshot_name": "{{user `image_name_prefix`}}-{{user `pipeline_counter`}}.{{user `commit`}}",
         "state_timeout": "60m",
-	"client_id": "{{env `DIGITAL_OCEAN_CLIENT_ID`}}",
-	"api_key": "{{env `DIGITAL_OCEAN_API_KEY`}}"
+	"client_id": "{{user `DIGITAL_OCEAN_CLIENT_ID`}}",
+	"api_key": "{{user `DIGITAL_OCEAN_API_KEY`}}"
     }],
     "provisioners": [{
         "type": "shell",
