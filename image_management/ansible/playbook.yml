@@ -1,7 +1,8 @@
 ---
-- hosts: all
+- name: Configure lamp
+  hosts: all
   sudo: yes
 
   roles:
-    - :perlmonkey.lamp
+    - perlmonkey.lamp
 
