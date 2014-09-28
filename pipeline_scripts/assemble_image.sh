@@ -1,6 +1,11 @@
 #!/bin/bash
 
-printenv
+sudo apt-get update --fix-missing
+sudo apt-get -y install python-software-properties
+sudo apt-get -y install software-properties-common
+sudo apt-add-repository -y ppa:rquillo/ansible
+sudo apt-get -y install ansible
+
 
 echo Verifying that Packer has been installed to the application cache...
 if [ ! -d ${SNAP_CACHE_DIR}/packer ]; then
@@ -9,6 +14,9 @@ if [ ! -d ${SNAP_CACHE_DIR}/packer ]; then
     unzip ${SNAP_CACHE_DIR}/packer.zip -d ${SNAP_CACHE_DIR}/packer
     echo Packer installation complete
 fi
+
+
+
 
 ${SNAP_CACHE_DIR}/packer/packer build image_management/digital_ocean_packer_script.json
 
