@@ -1,15 +1,5 @@
 #!/bin/bash
 
-sudo easy_install pip
-sudo pip install paramiko PyYAML jinja2 httplib2
-
-git clone git://github.com/ansible/ansible.git --recursive
-cd ./ansible
-source ./hacking/env-setup
-cd ..
-
-ansible all -m ping --ask-pass
-
 echo Verifying that Packer has been installed to the application cache...
 if [ ! -d ${SNAP_CACHE_DIR}/packer ]; then
     echo Packer was missing from the cache. Installing...
