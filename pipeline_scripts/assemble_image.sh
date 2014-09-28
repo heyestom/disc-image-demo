@@ -3,9 +3,9 @@
 printenv
 
 echo Verifying that Packer has been installed to the application cache...
-if [ ! -d ${SNAP_CACHE_DIR}/packer ]; then
+if [ ! -d ${SNAP_CACHE_DIR}/packerfda ]; then
     echo Packer was missing from the cache. Installing...
-    wget --no-verbose https://dl.bintray.com/mitchellh/packer/0.6.1_linux_amd64.zip -O ${SNAP_CACHE_DIR}/packer.zip
+    wget --no-verbose https://dl.bintray.com/mitchellh/packer/0.7.1_linux_amd64.zip -O ${SNAP_CACHE_DIR}/packer.zip
     unzip ${SNAP_CACHE_DIR}/packer.zip -d ${SNAP_CACHE_DIR}/packer
     echo Packer installation complete
 fi
