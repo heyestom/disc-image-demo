@@ -38,12 +38,6 @@ class DigitalOceanUtils
     smallest_box_512 = 66
 
     response = @digital_ocean_client.droplets.create({name: name, size_id: smallest_box_512, image_id: image_id, region_id: london, ssh_key_ids: ssh_keys})
-
-    require 'pp'
-    pp response
-    pp response.droplet
-
-    response.droplet.id
   end
 
   def rebuild_droplet_from(droplet_name, image_id)
