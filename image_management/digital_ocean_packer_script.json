@@ -11,13 +11,20 @@
 	"api_key": "{{user `api_key`}}",
         "type": "digitalocean",
         "region": "lon1",
-        "image": "LAMP-on-Ubuntu-14.04",
+        "image": "ubuntu-14-04-x64",
         "snapshot_name": "{{user `image_name_prefix`}}-{{user `pipeline_counter`}}.{{user `commit`}}",
         "state_timeout": "60m"
     }],
     "provisioners": [{
             "type": "shell",
             "script": "image_management/install_ansible.sh"
-    }]
+
+	  },{
+            "type": "ansible-local",
+            "playbook_file": "image_management/ansible/playbook.yml",
+            "role_paths": [
+            "image_management/ansible/perlmonkey.lamp"
+            ]
+     }]
 }
 
