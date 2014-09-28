@@ -1,11 +1,12 @@
 require_relative 'digital_ocean_utils'
 
-digital_ocean_utils = DigitalOceanUtils.new(ENV['DIGITALOCEAN_CLIENT_ID'], ENV['DIGITALOCEAN_API_KEY'])
+digital_ocean_utils = DigitalOceanUtils.new(ENV['DIGITAL_OCEAN_CLIENT_ID'], ENV['DIGITAL_OCEAN_API_KEY'])
 
 application_name = ENV['APPLICATION_NAME']
 build_number = ENV['SNAP_PIPELINE_COUNTER']
 commit_sha = ENV['SNAP_COMMIT_SHORT']
 ssh_keys = ENV['AUTHORIZED_USERS'].split(',')
+
 puts "SSH Keys: #{ssh_keys}"
 environment = ARGV[0].upcase
 
