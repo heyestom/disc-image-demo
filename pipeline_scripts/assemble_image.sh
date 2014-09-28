@@ -1,11 +1,14 @@
 #!/bin/bash
 
-sudo apt-get update --fix-missing
-sudo apt-get -y install python-software-properties
-sudo apt-get -y install software-properties-common
-sudo apt-add-repository -y ppa:rquillo/ansible
-sudo apt-get -y install ansible
+sudo easy_install pip
+sudo pip install paramiko PyYAML jinja2 httplib2
 
+git clone git://github.com/ansible/ansible.git --recursive
+cd ./ansible
+source ./hacking/env-setup
+cd ..
+
+ansible all -m ping --ask-pass
 
 echo Verifying that Packer has been installed to the application cache...
 if [ ! -d ${SNAP_CACHE_DIR}/packer ]; then
