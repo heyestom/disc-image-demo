@@ -1,5 +1,6 @@
 ---
-- hosts: all
+- name: Configure lamp
+  hosts: all
   sudo: yes
 
   roles:
