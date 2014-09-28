@@ -1,5 +1,7 @@
 #!/bin/bash
 
+printenv
+
 echo Verifying that Packer has been installed to the application cache...
 if [ ! -d ${SNAP_CACHE_DIR}/packer ]; then
     echo Packer was missing from the cache. Installing...
