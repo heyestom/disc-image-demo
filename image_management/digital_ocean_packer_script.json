@@ -16,8 +16,14 @@
         "state_timeout": "60m"
     }],
     "provisioners": [{
-        "type": "shell",
-        "script": "image_management/install_ansible.sh"
+            "type": "shell",
+            "script": "image_management/install_ansible.sh"
+   	 },{
+            "type": "ansible-local",
+            "playbook_file": "image_management/ansible/playbook.yml",
+            "role_paths": [
+                "image_management/ansible/perlmonkey.lamp"
+            ]
     }]
 }
 
