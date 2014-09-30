@@ -1,0 +1,47 @@
+---
+- name: Making sure uwsgi dependencies are installed from apt...
+  apt: pkg={{ item }} state=present
+  with_items:
+    - build-essential
+    - libonig-dev
+    - libqdbm-dev
+    - libbz2-dev
+    - libxml2-dev
+    - libkrb5-dev
+    - libpcre3-dev
+    - libdb5.1-dev
+    - python2.7
+    - python2.7-dev
+    - ruby1.9.1-dev
+    - libphp5-embed
+    - php5-dev
+    - libcap-dev
+    - liblua5.1-0-dev
+  when: ansible_os_family == "Debian"
+
+- name: Making sure uwsgi dependencies are installed from yum...
+  yum: name="{{ item }}" state=present
+  with_items:
+    - "@Development tools"
+    - openssl-devel
+    - libxml2-devel
+    - krb5-devel
+    - pcre-devel
+    - libdbi-devel
+    - python-devel
+    - libedit-devel
+    - gmp-devel
+    - bzip2-devel
+    - php-embedded
+    - php-devel
+    - lua-devel
+    - libcap-devel
+  when: ansible_os_family == "RedHat"
+
+- name: RHEL/CentOS 7.x support for ruby
+  yum: name="{{ item }}" state=present
+  with_items:
+      - ruby
+      - ruby-devel
+  when: ansible_os_family == "RedHat" and ansible_distribution_version > "7"
+
