@@ -23,7 +23,7 @@
             "type": "ansible-local",
             "playbook_file": "image_management/ansible/playbook.yml",
             "role_paths": [
-            "image_management/ansible/perlmonkey.lamp"
+            "image_management/ansible/laggyluke.nginx"
             ]
      }]
 }
